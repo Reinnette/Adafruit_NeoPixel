@@ -147,7 +147,7 @@ void Adafruit_NeoPixel::updateLength(uint16_t n) {
   free(pixels); // Free existing data (if any)
 
   // Allocate new data -- note: ALL PIXELS ARE CLEARED
-  numBytes = n * ((wOffset == rOffset) ? 3 : 4);
+  numBytes = 60 * ((wOffset == rOffset) ? 3 : 4);
   if ((pixels = (uint8_t *)malloc(numBytes))) {
     memset(pixels, 0, numBytes);
     numLEDs = n;
